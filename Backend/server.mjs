@@ -16,11 +16,7 @@ const __dirname = path.resolve();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    origin: 'https://satyam-invensis.github.io',
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type'],
-}));
+app.use(cors());
 
 // Set view engine and static files
 app.set('view engine', 'ejs');
