@@ -8,11 +8,7 @@ import { fileURLToPath } from 'url';
 // Initialize Express app
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: 'http://127.0.0.1:5500', // Change this to your frontend origin
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 
 // Determine current directory for static files
 const __filename = fileURLToPath(import.meta.url);
